@@ -94,7 +94,4 @@ int main(){
     cout<<"_______pocketMoney________"<<endl;
     p->fatherGive(1000,500);
     p->brotherTaken(300,400);
-
-
-
 }

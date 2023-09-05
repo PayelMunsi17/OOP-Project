@@ -31,11 +31,15 @@ class family {
     int number;
 
     family(){
-       name="akkas";
-        age=48;
-        number=234;
-
+       name;
+       age;
     };
+    void fname()
+    {
+        cout<<"father's name:"<<name<<endl;
+        cout<<"father's age:"<<age<<endl;
+    }
+
     family(string n,int a){
         name = n;
         age = a;
@@ -52,8 +56,8 @@ class sister: public family
  public:
      void display3(){
         cout<<"_____sister details_____"<<endl;
-        cout<<"Sisters Name"<<name<<endl;
-        cout<<"Sisters Age"<<age<<endl;
+        cout<<"Sisters Name :"<<name<<endl;
+        cout<<"Sisters Age :"<<age<<endl;
      }
 };
 
@@ -80,21 +84,20 @@ int main(){
     n="payel";
     m1.setName(n);
     m1.info();
-    family f1;
-    family f2("Maruf",21);
     m1.display();
-    cout<<"father's name:"<<f1.name<<endl;
-    cout<<"father's age:"<<f1.age<<endl;
-     cout<<"father's phoneNumber:"<<f1.number<<endl;
+    family f1;
+    f1.name="akkas ali";
+    f1.age=45;
+    cout<<"------father details------"<<endl;
+    f1.fname();
+    family f2("Maruf",21);
     f2.display2();
     sister s1;
-    sister::family f3("eite",18);
+    s1.name="eite";
+    s1.age=18;
     s1.display3();
     pocketmoney *p= new RemainMoney;
     cout<<"_______pocketMoney________"<<endl;
     p->fatherGive(1000,500);
     p->brotherTaken(300,400);
-
-
-
 }

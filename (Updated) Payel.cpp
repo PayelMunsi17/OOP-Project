@@ -1,20 +1,21 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class myself {
-    private:
+class myself   //class define
+{
+    private:        //encapsulation
     string name;
-    public:
+    public:         //encapsulation
     int age=21;
     int number=123;
 
-    void setName(string &n){
+    void setName(string &n){    //Setter Methods
 		name = n;
 	}
 	void info(){
 		cout <<"name: "<< name<<endl;
 	}
-	string getName(){
+	string getName(){     //Getter Methods
 		return name;
 	}
 
@@ -30,17 +31,20 @@ class family {
     int age;
     int number;
 
-    family(){
+    family()    //Constructor without paramiter
+    {
        name;
        age;
     };
     void fname()
     {
+        cout<<"_______father details______"<<endl;
         cout<<"father's name:"<<name<<endl;
         cout<<"father's age:"<<age<<endl;
     }
 
-    family(string n,int a){
+    family(string n,int a)      //Constructor with paramiter
+    {
         name = n;
         age = a;
     };
@@ -51,7 +55,7 @@ class family {
         cout<<"Brothers age:"<<age<<endl;
     }
 };
-class sister: public family
+class sister: public family      //inheritance
 {
  public:
      void display3(){
@@ -61,12 +65,12 @@ class sister: public family
      }
 };
 
-class pocketmoney{
+class pocketmoney{         //interface,Abstract class,
 public:
-	virtual void fatherGive (int x, int y)=0;
+	virtual void fatherGive (int x, int y)=0;         //Polymorphism,pure virtual function
 	virtual void brotherTaken(int x, int y)=0;
 };
-class RemainMoney:public pocketmoney{
+class RemainMoney:public pocketmoney{          //inheritance
 	public:
 		void fatherGive (int x, int y)
 		{
@@ -88,7 +92,6 @@ int main(){
     family f1;
     f1.name="akkas ali";
     f1.age=45;
-    cout<<"------father details------"<<endl;
     f1.fname();
     family f2("Maruf",21);
     f2.display2();
